@@ -7,7 +7,3 @@ def division(a,b):
         return 0
     if a>0:
         return 1 + division(a-b,b)
-
-a = int(input())
-b = int(input())
-print(division(a,b))
