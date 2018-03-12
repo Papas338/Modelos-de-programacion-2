@@ -69,7 +69,7 @@ sumaParesFunciones(x:xi) = sum (filter even (x:xi))
 listaImpar::[Int]->Int
 listaImpar[] = 0
 listaImpar(x:xs)
- | mod x 2 == 1 = 1 + listaImpar(xs)
+ | mod x 2 == 1 = 1 + listaImpar(xs)tail (y:yi)
  | otherwise = listaImpar(xs)
 
 --contar numeros impares con funciones de Haskell
@@ -95,3 +95,7 @@ compListas [] (x:xi) = False
 compListas [] [] = True 
 compListas (x:xi) [] = True
 compListas (x:xs) (y:yi) = enLista y (x:xs) && compListas (x:xs) yi
+
+--Determinar si una lista contiene a otra con funciones de Haskell
+contLista::[Int]->[Int]->Bool
+contLista (x:xs) (y:yi) = and[elem z (x:xs)|z <- (y:yi)]
