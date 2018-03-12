@@ -83,3 +83,10 @@ mayorLista(x:[]) = x
 mayorLista(x:xs)
  | x>mayorLista(xs) = x
  | otherwise = mayorLista(xs)
+ --Determinar si una lista contiene otra lista en totalidad
+comp_listas :: [Int] -> [Int] -> Bool
+comp_listas [] [] = True 
+comp_listas [] _ = False
+comp_listas _ [] = False
+comp_listas (a:b) (c:d) | (a == c) =  comp_listas b d
+						| otherwise = False
