@@ -52,4 +52,6 @@ esposode(A,B) :- padrede(A,C), padrede(B,C).
 cunadode(A,B) :- esposode(A,C), hermanode(C,B).
 suegrode(A,B) :- padrede(A,C), esposode(C,B).
 yernode(A,B) :- suegrode(B,A).
+consuegrode(A,B) :- padrede(A,C), padrede(B,D), esposode(C,D).
+tiopoliticode(A,B) :- tiode(A,B), padrede(C,B), hermanode(A,C).
 esfeliz(A) :- not(esposode(A,_)).
