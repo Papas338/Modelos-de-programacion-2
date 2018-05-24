@@ -152,8 +152,8 @@ function maestroI() {
     this.x += this.vel;
     this.sprite = 0;
     colisionMaestroI(numbar);
-    if (this.x - 51 <= 0) {
-      this.x = getRandomArbitrary(276, 340) * 4;
+    if (this.x + 51 >= lienzo.width) {
+      this.x = getRandomArbitrary(0, 80) * 4;
       this.y = getRandomArbitrary(0, 80) * 7;
 			this.vel = getRandomArbitrary(3,6);
 		}
@@ -199,8 +199,8 @@ function mMaestroI() {
     this.x += this.vel;
     this.sprite = 0;
     colisionMaestroMI(numbar);
-    if (this.x - 51 <= 0) {
-      this.x = getRandomArbitrary(276, 340) * 4;
+    if (this.x + 51 >= lienzo.width) {
+      this.x = getRandomArbitrary(0, 80) * 4;
       this.y = getRandomArbitrary(0, 80) * 7;
 			this.vel = getRandomArbitrary(3,6);
 		}
