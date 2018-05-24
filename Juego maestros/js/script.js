@@ -117,6 +117,7 @@ function cambioVida() {
 function maestroD() {
   this.x = getRandomArbitrary(276, 340) * 4;
   this.y = getRandomArbitrary(0, 80) * 7;
+  this.vel = getRandomArbitrary(3,6);
   this.img = [$("#bueno")[0]];
   this.sprite = 0;
 
@@ -125,14 +126,21 @@ function maestroD() {
   }
 
   this.actualizar = function(numbar) {
+    this.x -= this.vel;
     this.sprite = 0;
     colisionMaestroD(numbar);
+    if (this.x - 51 <= 0) {
+      this.x = getRandomArbitrary(276, 340) * 4;
+      this.y = getRandomArbitrary(0, 80) * 7;
+			this.vel = getRandomArbitrary(3,6);
+		}
   }
 }
 
 function maestroI() {
   this.x = getRandomArbitrary(0, 80) * 4;
   this.y = getRandomArbitrary(0, 80) * 7;
+  this.vel = getRandomArbitrary(3,6);
   this.img = [$("#bueno")[0]];
   this.sprite = 0;
 
@@ -141,8 +149,14 @@ function maestroI() {
   }
 
   this.actualizar = function(numbar) {
+    this.x += this.vel;
     this.sprite = 0;
     colisionMaestroI(numbar);
+    if (this.x - 51 <= 0) {
+      this.x = getRandomArbitrary(276, 340) * 4;
+      this.y = getRandomArbitrary(0, 80) * 7;
+			this.vel = getRandomArbitrary(3,6);
+		}
   }
 }
 
@@ -150,6 +164,7 @@ function maestroI() {
 function mMaestroD() {
   this.x = getRandomArbitrary(276, 340) * 4;
   this.y = getRandomArbitrary(0, 80) * 7;
+  this.vel = getRandomArbitrary(3,6);
   this.img = [$("#malo")[0]];
   this.sprite = 0;
 
@@ -158,14 +173,21 @@ function mMaestroD() {
   }
 
   this.actualizar = function(numbar) {
+    this.x -= this.vel;
     this.sprite = 0;
     colisionMaestroMD(numbar);
+    if (this.x - 51 <= 0) {
+      this.x = getRandomArbitrary(276, 340) * 4;
+      this.y = getRandomArbitrary(0, 80) * 7;
+			this.vel = getRandomArbitrary(3,6);
+		}
   }
 }
 
 function mMaestroI() {
   this.x = getRandomArbitrary(0, 80) * 4;
   this.y = getRandomArbitrary(0, 80) * 7;
+  this.vel = getRandomArbitrary(3,6);
   this.img = [$("#malo")[0]];
   this.sprite = 0;
 
@@ -174,8 +196,14 @@ function mMaestroI() {
   }
 
   this.actualizar = function(numbar) {
+    this.x += this.vel;
     this.sprite = 0;
     colisionMaestroMI(numbar);
+    if (this.x - 51 <= 0) {
+      this.x = getRandomArbitrary(276, 340) * 4;
+      this.y = getRandomArbitrary(0, 80) * 7;
+			this.vel = getRandomArbitrary(3,6);
+		}
   }
 }
 
